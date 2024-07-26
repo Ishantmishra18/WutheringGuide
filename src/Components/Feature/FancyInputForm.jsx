@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
-const FancyInputForm = () => {
+const FancyInputForm = ({emailsub}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -48,9 +48,7 @@ const FancyInputForm = () => {
 
     emailjs.send('service_g7bq3cp', 'template_3gv4tqt', templateParams,'GM2sp8xcTw8v-vtwL')
       .then((result) => {
-        return(
-          alert('Thanks for the feedback')
-        )
+          emailsub()
       }, (error) => {
         alert('Failed to send email. Please try again later.');
       });

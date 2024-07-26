@@ -45,11 +45,10 @@ const Home = ({latestChar, allWeapon , allEchoes}) => {
   return (
     <>
       <div className="homepage h-screen w-screen flex items-center relative overflow-hidden px-8 gap-3">
-        <div className="bg top-0 left-0 h-full w-full absolute -z-50"></div>
         <div className="hwholecont pl-2 flex flex-col ">
           <img className='h-[10vw] w-[10vw] homelogo' src={logo} alt="" />
           <div className="stripe h-[40vh] w-[120vw] absolute top-[40vh] left-[-30vw] -z-10 rotate-45"></div>
-          <div className="hcont text-white mt-6 w-[50vw] h-[full] leading-tight tracking-tighter">
+          <div className="hcont text-white mt-3 w-[50vw] h-[full] leading-tight tracking-tighter">
             <h2 className='realtext text-center'>Master the Game with Style</h2>
             <h2 className=' absolute z-40 shadetext text-center'>Master the Game with Style</h2>
             <h4 className='w-[45vw] text-lg hometag'>

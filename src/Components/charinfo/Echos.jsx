@@ -27,9 +27,6 @@ const Echos = ({ character, allEchoes, allSonata }) => {
   }, [echocost, echoSonata, echoSonata2]);
 
   const renderEmid = (matchingElement) => {
-    
-    
-
     if (!matchingElement) return null;
 
     return (
@@ -47,7 +44,7 @@ const Echos = ({ character, allEchoes, allSonata }) => {
             <p key={idx}>{data}</p>
           ))}
         </div>
-        <h4 className={`text-white bg-opacity-25 bg-black rounded-lg backdrop-blur-md absolute ${isMobile ? 'text-sm right-8 px-4 py-2 -bottom-5 ' : 'text-2xl py-3 px-8 -bottom-6 -left-6'}`}>{allEchoes[matchingElement].name}</h4>
+        <h4 className={`text-white bg-opacity-25 bg-black rounded-lg backdrop-blur-md absolute ${isMobile ? 'text-sm right-6 px-2 py-2 -bottom-5 ' : 'text-2xl py-3 px-8 -bottom-6 -left-6'}`}>{allEchoes[matchingElement].name}</h4>
       </div>
     );
   };
@@ -210,7 +207,7 @@ const Echos = ({ character, allEchoes, allSonata }) => {
                 (val) => allEchoes[val].cost === echocost && allEchoes[val].sonata.includes(echoSonata)
               ))
             )}
-            <h2 className={`text-white bg-black py-2 px-8 rounded-full  text-center ${isMobile ? 'text-[12px] w-[45vw] ml-44 rounded-lg' : 'my-10 text-xl'}`}>
+            <h2 className={`text-white bg-black py-2 px-8 rounded-lg  text-center ${isMobile ? 'text-[12px] w-[45vw] ml-44 rounded-lg' : 'mt-14 text-xl'}`}>
               {echocost === 4 ? echoSonata === character.echosonata[0][0] ? `best Main echo for ${character.name}` : `best Main echo for ${character.name} from ${ allSonata.name[echoSonata]}` : echocost === 3 ? `3 cost alternative echo for ${character.name}` : 'dont use 1 cost echoes as Main echo'}
             </h2>
           </div>

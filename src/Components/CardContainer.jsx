@@ -9,18 +9,20 @@ const CardContainer = ({ charData, selectedCardElement }) => {
       '.fakecard',
       {
         opacity: 0,
-        scale: 0.2,
-        rotationX: 45,
-        rotationY: 145,
-        rotationZ: 85,
+        scale: 0.8,
+        rotationX: 35,
+        rotationY: 45,
+        rotationZ: 15,
+        y:40
       },
       {
         opacity: 1,
         scale: 1,
+        y:0,
         rotationX: 0,
         rotationY: 0,
         rotationZ: 0,
-        stagger: 0.2,
+        stagger: 0.1,
         duration: 0.5,
       }
     );

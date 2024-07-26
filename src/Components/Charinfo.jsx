@@ -22,7 +22,7 @@ const elementGradients = {
     electro:'linear-gradient( #ffffff, #a250bb)'
 };
 
-const Charinfo = ({ charData, weapons, allEchoes, allSonata }) => {
+const Charinfo = ({ charData, weapons, allEchoes, allSonata}) => {
     const [isMobile, setIsPhone] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
@@ -36,7 +36,7 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata }) => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
+       
     const getRandomDuration = () => {
         const durations = [0.5, 1, 3];
         return durations[Math.floor(Math.random() * durations.length)];
@@ -54,9 +54,9 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata }) => {
         const duration3 = getRandomDuration();
 
         const tl = gsap.timeline();
-        tl.to('.hbdface', { duration: duration1, x: -140, opacity: 1 })
+        tl.to('.hbdface', { duration: duration1, y:isMobile?100:150 ,opacity:1})
             .to('.hbdface', { duration: duration2 })
-            .to('.hbdface', { duration: duration3, x: 0 });
+            .to('.hbdface', { duration: duration3, y: 0});
 
         return () => {
             tl.kill();
@@ -117,7 +117,7 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata }) => {
                 <img src={character.rarity === 4 || character.name === 'rover' || character.name === 'rover (havoc)'
                     ? `/characters/${param}/top.png`
                     : `/characters/${param}/full.png`
-                } alt="" className={`${character.rarity === 4 || character.name === 'rover' || character.name === 'rover (havoc)' ? isMobile ? 'h-[70vh] top-[10vh]' : 'h-[110vh] right-[10vw]' : isMobile ? 'w-screen h-[80vh]' : 'h-[100vh]  w-[60%]'} object-cover absolute right-0 top-0 bottom-0 -z-10 mainphoto`} />
+                } alt="" className={`${character.rarity === 4 || character.name === 'rover' || character.name === 'rover (havoc)' ? isMobile ? 'h-[70vh] top-[10vh]' : 'h-[110vh] right-[10vw]' : isMobile ? 'w-screen h-[80vh]' : 'h-[100vh]  w-[62%]'} object-cover absolute right-0 top-0 bottom-0 -z-10 mainphoto`} />
                 <div className='slace -z-20'></div>
                 <img src={`/elements/${character.element}.png`} alt="" className='elemsym h-[70vh] aspect-square absolute left-[12vw] top-[20vh] z-10' />
                 <div className="mainintro absolute top-[20vh] w-[35vw] h-auto left-[10vw] leading-tight ">
@@ -132,27 +132,27 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata }) => {
             </div>
 
             <div className="charintro w-screen h-[100vh] bg-zinc-950 flex flex-col px-8 pt-12 items-center absolute z-40 overflow-hidden" id='overview'>
-                <img src={`/region/${character.region}.png`} alt="" className={`absolute h-[40vh] left-[15vw] ${isMobile ? 'bottom-0 w-full' : ''}`} />
+                <img src={`/region/${character.region}.png`} alt="" className={`absolute h-[40vh] -z-20 left-[15vw] ${isMobile ? 'bottom-0 w-full' : ''}`} />
                 <img src={`/characters/${param}/top.png`} alt="" className={`object-cover chartop z-10 absolute left-4 ${isMobile ? 'h-[55vh]' : 'h-[85vh] '}`} />
                 <div className="bgrect absolute h-[100vh] w-[12vw] bg-zinc-800 top-0 left-[6vw] -z-10"></div>
                 <h1 className='title'>Overview</h1>
                 <div className={`overbox  w-[59vw]  rounded-xl relative flex gap-[1vw] ${isMobile ? 'h-[45vh] w-[95vw] flex-col' : 'h-[23vw] ml-[25vw]'}`}>
-                    <div className={`hbdface absolute h-[10vw] aspect-square -rotate-90 bottom-2  overflow-hidden ${isMobile ? 'right-[-45vw] bottom-[-10vh] h-[30vw] w-[43vw] z-20' : ' -z-20 left-0'}`}><img src={`/characters/${param}/main.png`} alt="" className='h-[220%] object-cover ' /></div>
+                    <div className={`hbdface absolute rotate-180 bottom-2 right-2 -z-10   overflow-hidden ${isMobile ? ' right-[0vw] bottom-[0vh] h-[28vw] w-[43vw]' : ' h-[10vw] w-auto '}`}><img src={`/characters/${param}/main.png`} alt="" className='h-[220%] object-cover ' /></div>
                     <div className={`flex  gap-[1vw]  h-full flex-col ${isMobile ? 'w-screen' : 'w-[61.01%]'}`}>
                         <div className={`flex gap-[1vw]  w-full ${isMobile ? 'h-[8vh]' : 'h-[8vw]'}`}>
                             <div className={`oglass  flex flex-col gap-3 items-center ${isMobile ? 'h-[8vh] w-[50vw]' : 'h-full w-[15vw]'}`}>
-                                <h1 className='text-2xl text-white h-[40%]'>Rarity</h1>
+                                <h1 className={`text-white h-[40%] ${isMobile?'text-lg':'text-2xl'}`}>Rarity</h1>
                                 <Star num={character.rarity} />
                             </div>
                             <div className={`oglass  relative flex  justify-between  overflow-hidden  ${isMobile ? 'h-[8vh] w-[44vw] pl-4' : 'h-full px-4 w-[20vw]'}`}>
                                 <div className={`absolute bg-neutral-950 rotate-[30deg] z-10 border-r-2 border-white ${isMobile ? ' h-[25vh] w-[32vw]  left-[-7vh] top-[-8vh]' : ' h-[14vw] w-[12vw]  left-[-2vw] top-[-4vw]'}`}></div>
                                 <div className="elem flex-col flex items-center z-20 h-full w-[40%]">
-                                    <h2 className={` uppercase text-white ${isMobile ? 'text-sm' : 'text-xl'}`}>{character.element}</h2>
-                                    <img src={`/elements/${character.element}.png`} alt="" className={`${isMobile ? 'h-[65%]' : ''}`} />
+                                    <h2 className={` uppercase text-white ${isMobile ? 'text-[10px]' : 'text-xl'}`}>{character.element}</h2>
+                                    <img src={`/elements/${character.element}.png`} alt="" className={`${isMobile ? 'h-[65%]' : 'h-[60%]'}`} />
                                 </div>
-                                <div className={`oweapon flex-col items-center flex h-full ${isMobile ? 'w-[40vw]' : ' w-[40%]'}`}>
-                                    <img src={`/symbols/${character.weapon}.png`} alt="" className={`${isMobile ? 'h-[65%]' : 'h-[80%]'}`} />
-                                    <h2 className={` uppercase text-white ${isMobile ? 'text-sm' : 'text-xl'}`}>{character.weapon}</h2>
+                                <div className={`oweapon flex-col items-center justify-end flex h-full ${isMobile ? 'w-[40vw]' : ' w-[40%]'}`}>
+                                    <img src={`/symbols/${character.weapon}.png`} alt="" className={`${isMobile ? 'h-[65%]' : 'h-[60%]'}`} />
+                                    <h2 className={` uppercase text-white ${isMobile ? 'text-[10px]' : 'text-xl'}`}>{character.weapon}</h2>
                                 </div>
                             </div>
                         </div>
@@ -172,8 +172,9 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata }) => {
                             </div>
                         </div>
                     </div>
-                    <div className={`oglass  w-[22vw] flex  items-center relative ${isMobile ? 'w-[95vw] justify-center h-[37vh] gap-6' : 'flex-col h-full'}`}>
-                        <h1 className={`absolute text-white  grid place-content-center ${isMobile ? ' top-4 text-lg left-[50%] w-[80%] -translate-x-1/2' : 'text-xl top-[-2vw] w-[22vw]'}`}>Ascension Material</h1>
+                    <div className={`oglass  w-[22vw] flex  items-center relative flex-col ${isMobile ? 'w-[95vw] justify-start gap-4 h-[37vh] flex-wrap ' : ' h-full'}`}>
+                        <h1 className={` text-white  grid place-content-center ${isMobile ?'top-1 text-center text-sm left-[50%] w-[80%] ' : ' absolute text-xl top-[-2vw] w-[22vw]'}`}>Ascension Material</h1>
+                        <div className={`flex  items-center ${isMobile?'gap-6':'flex-col'}`}>
                         <div className="coin ascenbox h-[7vw] w-[7vw] flex flex-col items-center">
                             <img src="/items/coin.png" alt="" className='h-[80%]' />
                             <h2>Credit Shell</h2>
@@ -186,6 +187,7 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata }) => {
                             <div className="ascenbox"><img src={`/items/${character.ascension[1]}.png`} alt="" />
                                 <h2>{character.ascension[1]}</h2>
                                 <h3>60</h3></div>
+                                </div>
                         </div>
                         <div className={`flex ${isMobile ? 'gap-6' : ''}`}>
                             {[...Array(4)].map((_, i) => (

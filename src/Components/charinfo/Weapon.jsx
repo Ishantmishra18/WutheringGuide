@@ -71,7 +71,7 @@ const Weapon = ({character , name , weapons}) => {
           <h4 className={`text-white wgsap ${isMobile ? 'text-sm' : 'text-2xl'}`}>
             {hoveredIndex !== null ? weapons[hoveredIndex].sub : ''}
           </h4>
-          <p className={`wgsap ${isMobile ? 'text-[12px] w-[90vw] m-2' : 'text-sm m-6'} text-white`}>
+          <p className={`wgsap ${isMobile ? 'text-[12px] w-[90vw] m-2' : 'text-[16px] my-6 w-[40vw]'} text-white`}>
             {hoveredIndex !== null ? weapons[hoveredIndex].des : ''}
           </p>
           <div className={`note bg-white ${isMobile ? 'px-4 py-3' : 'px-[6vh] py-5'} bradius wgsap text-lg font-bold flex flex-col items-center`}>

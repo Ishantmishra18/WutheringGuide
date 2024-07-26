@@ -121,9 +121,9 @@ const Skills = ({ character, name }) => {
           max={`${costIndex===1?'9':'2'}`}
           value={sliderValue}
           onChange={handleSliderChange}
-          className={`sliderbar ${costIndex===1?'sliderlong':'slidershort'}`}
+          className={`sliderbar px-[2px] ${costIndex===1?'sliderlong':'slidershort'}`}
         />
-        <div className={`slideval text-white ${isMobile?'w-[30vw] text-sm':'text-2xl'}`}>Level {sliderValue} to {Number(sliderValue) + 1}</div>
+        <div className={`slideval text-white ${isMobile?'w-[30vw] text-[10px]':'text-2xl'}`}>Level {sliderValue} to {Number(sliderValue) + 1}</div>
         </div>
         <div className={`flex flex-wrap  h-[18vh]  bg-slate-70 justify-center ${isMobile?'gap-8 w-[96vw]':'gap-2 w-[60vw]'}`}>
         <div className={`flex flex-col items-center justify-start   ${isMobile?'h-[10vh] w-[15vw]':'h-[20vh] w-[18vh]'}`}>
