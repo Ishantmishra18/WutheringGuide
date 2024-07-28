@@ -33,7 +33,7 @@ const StarComponent = ({ num, size}) => {
         <img
           key={index}
           ref={(el) => (starsRef.current[index] = el)}
-          src="/symbols/star.png"
+          src="/symbols/star.webp"
           alt="star"
           className={`${ size === 'small'? 'md:h-[20px] h-[14px]':'md:h-[30px] h-[20px] '} stars aspect-square`}
         />

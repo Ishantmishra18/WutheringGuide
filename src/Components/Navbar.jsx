@@ -16,7 +16,7 @@ const Navbar = ({ buttonNames, onButtonClick }) => {
       <div className='h-full w-[84.5%] flex items-center justify-around z-50 z elemcont rounded-l-full rounded-r-2xl'>
         {buttonNames.map((name, index) => (
           <Link key={index} onClick={() => onButtonClick(name)} className="element h-[80%] aspect-square duration-300 p-[6px]" to={`/Guide`}>
-            <img src={`/elements/${name}.png`} alt={name} className="h-full w-full" />
+            <img src={`/elements/${name}.webp`} alt={name} className="h-full w-full" />
             <div className="elemname top-[0px] text-gray-100 opacity-0 capitalize pointer-events-none">{name}</div>
           </Link>
         ))}
@@ -24,7 +24,8 @@ const Navbar = ({ buttonNames, onButtonClick }) => {
         <div className="allchar rounded-r-full rounded-l-sm h-full w-[15%] flex items-center justify-around">
         <Link onClick={() => onButtonClick('null')} className='h-full element duration-300 aspect-square p-[7px] flex items-center flex-col  text-white' to={`/Guide`}>
         <img src={`/symbols/allchar.webp`} alt='' className="h-full"/>
-        <div className="elemname top-[0px] text-gray-100 opacity-0 capitalize pointer-events-none">All</div>
+        <div className="elemname top-[0px] text-gray-100 opacity-0 capitalize pointer-events-none">All
+        </div>
         </Link>
         </div>
       </div>

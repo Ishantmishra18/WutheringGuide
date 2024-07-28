@@ -16,7 +16,7 @@ const Sidebar = () => {
         if (id === 'overview') {
 
             const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-            const targetPosition =isMobile? vh*0.78 : vh * 0.735;
+            const targetPosition =isMobile? vh*0.62 : vh * 0.735;
             window.scrollTo({ top: targetPosition, behavior: 'smooth' });
 
         } else {

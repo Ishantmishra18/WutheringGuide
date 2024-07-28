@@ -2005,6 +2005,7 @@ const App = () => {
       element:<>
       <ScrollToTop />
       <Home latestChar={charData[0]}  allWeapon={allWeapon} allEchoes={allEchoes} />
+      <Footer/>
       </>,
       errorElement:<h1 className="text-gray-200">ERROR:???</h1>
     }

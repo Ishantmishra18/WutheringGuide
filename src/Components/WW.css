@@ -14,7 +14,7 @@ body{
   border-radius:70px 20px 20px 70px;
 }
 .allchar{
-  background:linear-gradient(45deg,rgb(14, 14, 14),rgb(24, 24, 24),rgb(10, 10, 10));
+  background:linear-gradient(45deg,rgb(10, 10, 10),rgb(14, 14, 14),rgb(16, 16, 16));
   border-radius:20px 70px 70px 20px;
 }
 .element:hover .elemname{
@@ -119,6 +119,9 @@ body{
   transition: 0.4s;
   display: grid ;
   place-content: center;
+}
+#newchar{
+  border-bottom: 2px solid rgb(255, 255, 255);
 }
 .hbtn .btn:hover{
   transform :translateY(12px);
@@ -846,13 +849,14 @@ transition: 0.3s;
   }
   .logo{
     height:4vh;
-    transform: translateY(1.2vh);
+    transform: translateY(2.4vh);
   }
   .bigelemcont{
     width: 66vw;
     height: 4.5vh;
     transform: translateX(0px);
     left:17vw ;
+    gap:2px
 
   }
   .elemcont{
@@ -954,11 +958,16 @@ transition: 0.3s;
 }
 
 /*WEAPON*/
+#weapon .title{
+  margin-top: 18px;
+}
 #weapon{
   gap: 14vh;
+  padding-top: 20px;
+  padding-bottom: 0;
+  height:auto
 }
 .wmaincont{
-  height:80vh;
   gap:60px
 }
 .wcont{
@@ -1089,6 +1098,8 @@ transition: 0.3s;
   /*SIDEBAR*/
   .sidescrollbar{
     justify-content: space-between;
+    border-radius: 12px 12px 0px 0px;
+    margin:0px 3px 0px 3px;
   }
   .sidebarname{   
     position:static;

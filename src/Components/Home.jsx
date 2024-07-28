@@ -65,12 +65,12 @@ const Home = ({latestChar, allWeapon , allEchoes}) => {
           {[...Array(7)].map((_, i) => {
             const randomNumber = random();
             const isGif = [0, 4, 5].includes(i);
-            const extension = isGif ? 'gif' : 'png';
+            const extension = isGif ? 'gif' : 'webp';
 
             return (
               <div key={i} className={`show ${i === 0 ? 'show1' : ''} h-[20vh] w-[20vh] bg-white flex items-center justify-center`}>
                 <img
-                  src={i === 3 ? '/random/centerimg.png' : `/random/${i+1}/${randomNumber}.${extension}`}
+                  src={i === 3 ? '/random/centerimg.webp' : `/random/${i+1}/${randomNumber}.${extension}`}
                   alt=""
                   className='h-full w-full object-cover rounded-xl'
                 />
@@ -81,14 +81,14 @@ const Home = ({latestChar, allWeapon , allEchoes}) => {
       </div>
       <div className={`h-[100vh] overflow-hidden w-screen relative flex ${isMobile ? 'flex-col justify-start' : 'flex-row'}`} id="newchar">
   <img
-    src={`characters/${latestChar.name}/main.png`}
+    src={`characters/${latestChar.name}/main.webp`}
     alt=""
     className={`absolute  object-cover z-10 ${isMobile ?' bottom-[-2%] right-0 w-[100vw] h-[80vh]' : 'h-[120vh] right-[20vw] bottom-[-5vw]'}`}
   />
 
   <div className="left h-full w-full md:w-[65%] relative">
     <img
-      src={`characters/${latestChar.name}/full.png`}
+      src={`characters/${latestChar.name}/full.webp`}
       alt=""
       className={`opacity-30 object-cover ${isMobile ? 'w-[150vh] absolute h-[100vh]' : 'w-full h-full'}`}
     />
@@ -103,15 +103,15 @@ const Home = ({latestChar, allWeapon , allEchoes}) => {
       >
         View Now
         {charitmes.map((val, key) => (
-          <img src={`items/${latestChar.ascension[val]}.png`} alt="" className={`absolute btnitem${key + 1} duration-300 opacity-0 btnitem`} />
+          <img src={`items/${latestChar.ascension[val]}.webp`} alt="" className={`absolute btnitem${key + 1} duration-300 opacity-0 btnitem`} />
         ))}
       </Link>
     </div>
   </div>
 
   <div className={`latestright w-[40vw] md:w-[35%] h-full flex gap-10 z-20 ${isMobile ? 'justify-center items-end py-10 h-[30vh] w-screen' : 'flex-col items-start justify-center px-[7vw]'}`}>
-    <img src={`weapon/${allWeapon[latestChar.weapons[0]].name}.png`} alt="" className='h-[16vh] w-[16vh] md:h-[21vh] md:w-[21vh] z-20 object-contain aspect-square bg-neutral-900 duration-200 rounded-[25px] hover:-rotate-12 hover:scale-110' />
-    <img src={`echoes/${allEchoes[latestChar.echobest[0]].name}.png`} alt="" className='h-[12vh] w-[12vh] md:h-[21vh] md:w-[21vh] z-20 object-contain aspect-square bg-neutral-900 duration-200 rounded-[25px] hover:rotate-12 hover:scale-110' />
+    <img src={`weapon/${allWeapon[latestChar.weapons[0]].name}.webp`} alt="" className='h-[16vh] w-[16vh] md:h-[21vh] md:w-[21vh] z-20 object-contain aspect-square bg-neutral-900 duration-200 rounded-[25px] hover:-rotate-12 hover:scale-110' />
+    <img src={`echoes/${allEchoes[latestChar.echobest[0]].name}.webp`} alt="" className='h-[12vh] w-[12vh] md:h-[21vh] md:w-[21vh] z-20 object-contain aspect-square bg-neutral-900 duration-200 rounded-[25px] hover:rotate-12 hover:scale-110' />
   </div>
 </div>
 
