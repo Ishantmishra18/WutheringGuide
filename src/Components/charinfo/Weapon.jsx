@@ -47,7 +47,7 @@ const Weapon = ({character , name , weapons}) => {
     <>
     <div className="page h-[145vh] overflow-hidden w-screen flex flex-col items-center justify-start relative py-12" id='weapon'>
         <h1 className="title wtrig">Weapon</h1>
-        <div className="flex w-screen h-[90vh] flex-wrap items-center justify-around wmaincont">
+        <div className="flex w-screen h-auto flex-wrap items-center justify-around wmaincont">
         <div className="flex justify-end gap-6 items-end flex-wrap h-[80vh] aspect-square rotate-45 wcont">
         {character.weapons.map((index , key)=>(
             <>
