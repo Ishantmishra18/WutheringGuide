@@ -81,7 +81,7 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata}) => {
                 trigger: '.charintro',
                 start: 'top bottom',
                 end: 'bottom top',
-                scrub: 2,
+                scrub: 1.5,
             },
         });
         gsap.to('.chartop', {
@@ -131,7 +131,7 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata}) => {
                 </div>
             </div>
 
-            <div className="charintro w-screen h-[100vh] bg-zinc-950 flex flex-col px-8 pt-12 items-center absolute z-40 overflow-hidden" id='overview'>
+            <div className="charintro w-screen h-[100vh] bg-zinc-950 flex flex-col px-8 pt-12 items-center absolute z-20 overflow-hidden" id='overview'>
                 <img src={`/region/${character.region}.webp`} alt="" className={`absolute h-[40vh] -z-20 left-[15vw] ${isMobile ? 'bottom-0 w-full' : ''}`} />
                 <img src={`/characters/${param}/top.webp`} alt="" className={`object-cover chartop z-10 absolute left-4 ${isMobile ? 'h-[55vh]' : 'h-[85vh] '}`} />
                 <div className="bgrect absolute h-[100vh] w-[12vw] bg-zinc-800 top-0 left-[6vw] -z-10"></div>

@@ -6,8 +6,8 @@ import Charinfo from './Components/Charinfo.jsx';
 import Footer from './Components/Footer.jsx';
 import ScrollToTop from './Components/ScrollToTop';
 import Home from './Components/Home.jsx';
-import { alplha , allWeapon } from './data.js';
-
+import {allWeapon } from './data.js';
+import Privacypol from './privacypol.jsx';
 
 
 
@@ -2008,6 +2008,13 @@ const App = () => {
       <Footer/>
       </>,
       errorElement:<h1 className="text-gray-200">ERROR:???</h1>
+    },
+    {
+      path:'/privacypolicy',
+      element:<>
+      <ScrollToTop />
+     <Privacypol />
+      </>,
     }
   ])
 

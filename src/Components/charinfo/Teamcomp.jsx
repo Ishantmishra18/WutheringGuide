@@ -42,7 +42,7 @@ const orderedTeamDescriptions = isMobile
     ].filter(des => des !== null)
   : character.teamdes;
   return (
-    <div className="z-20 overflow-hidden page flex flex-col items-center py-12 w-screen h-auto" id="team">
+    <div className="overflow-hidden page flex flex-col items-center py-12 w-screen h-auto" id="team">
       <h1 className="title">Team Comps</h1>
 
       <div className="teams flex justify-center items-center gap-2">
@@ -56,7 +56,7 @@ const orderedTeamDescriptions = isMobile
               }`}
             >
               <img src={`/characters/${team[0]}/main.webp`} alt="" className="photo1"/>
-              <img src={`/characters/${name}/main.webp`} alt="" className="photo2 z-40"/>
+              <img src={`/characters/${name}/main.webp`} alt="" className="photo2 z-10"/>
               <img src={`/characters/${team[1]}/main.webp`} alt="" className="photo3" />
             </div>
             <div

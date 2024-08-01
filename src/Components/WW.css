@@ -415,6 +415,7 @@ border-radius: 20px;
 .finputbar{
   transition:all 0.6s;
 }
+
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   20%, 60% { transform: translateX(-10px); }
@@ -491,7 +492,6 @@ border-radius: 20px;
   margin-top: 10px;
 }
 .datacont div{
-  z-index: 30;
   border-radius: 2px 2px 12px 12px;
   
 }
@@ -702,7 +702,7 @@ transition: 0.3s;
   background-color: rgba(0, 0, 0, 0);
   color: white;
   border:1px solid white;
-  z-index: 43;
+  z-index: 10;
 }
 .esubcircle{
   aspect-ratio: 1/1;
@@ -765,6 +765,23 @@ transition: 0.3s;
   overflow-x: hidden;
 }
 
+.privacy{
+  padding: 4px 20% 4px 20%;
+}
+.privacy h1{
+  font-size: 56px;
+  color: white;
+  margin-bottom: 5%;
+}
+.privacy h3{
+  font-size: 28px;
+  color: rgb(208, 208, 208);
+}
+.privacy p{
+  font-size: 16px;
+  color: rgb(154, 154, 154);
+  margin-bottom: 2%;
+}
 
 /*PHONE*/
 @media (max-width: 768px) {
@@ -1139,5 +1156,22 @@ overflow: hidden;
   }
   .fmsg{
     font-size: 12px;
+  }
+  .privacy{
+    padding: 4px 10% 4px 10%;
+  }
+  .privacy h1{
+    font-size: 46px;
+    color: white;
+    margin-bottom: 8%;
+  }
+  .privacy h3{
+    font-size: 20px;
+    color: rgb(208, 208, 208);
+  }
+  .privacy p{
+    font-size: 12px;
+    color: rgb(154, 154, 154);
+    margin-bottom: 6%;
   }
 }

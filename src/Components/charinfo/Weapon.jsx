@@ -61,7 +61,7 @@ const Weapon = ({character , name , weapons}) => {
         ))}
         </div>
 
-        <div className={`wdata p-[10px] rounded-lg ${isMobile ? 'w-[80vw] gap-3' : 'w-[40vw] mb-24'} h-auto backdrop-blur-3xl z-30 flex flex-col justify-start items-center bradius`}>
+        <div className={`wdata p-[10px] rounded-lg ${isMobile ? 'w-[80vw] gap-3' : 'w-[40vw] mb-24'} h-auto backdrop-blur-3xl z-10 flex flex-col justify-start items-center bradius`}>
           <div className={`flex w-auto items-center ${isMobile ? 'mb-2' : 'mb-10'}`}>
             <img src={`/symbols/${character.weapon}.webp`} alt="" className={`aspect-square wgsap ${isMobile ? 'h-[4vh]' : 'h-[10vh]'}`} />
             <h1 className={`font-bold text-white text-center wgsap ${isMobile ? 'text-3xl' : 'text-6xl m-2'}`}>
