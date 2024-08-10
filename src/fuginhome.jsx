@@ -20,10 +20,10 @@ const FuginHome = () => {
         </div>
       </nav>
 
-      <div className={`text-white border-t-2 border-b-2 border-white flex ${isMobile ? 'flex-col h-80' : 'h-[50vh]'} w-full`}>
+      <div className={`text-white border-t-2 border-b-2 border-white flex overflow-x-hidden ${isMobile ? 'flex-col h-80' : 'h-[50vh]'} w-full`}>
         <Link
           to="/WW"
-          className={`h-full relative duration-300 opacity-75 hover:opacity-100 hover:w-[70%]  group ${isMobile ? 'w-full border-white border-b-2' : 'w-[65%]'}`}
+          className={`h-full relative duration-300 opacity-75 hover:opacity-100 hover:w-[70%]   group ${isMobile ? 'w-full border-white border-b-2' : 'w-[65%]'}`}
         >
           <div className={`h-full w-full overflow-hidden relative skew-x-[-20deg] ${isMobile?'':'origin-bottom'}`}>
             <img
