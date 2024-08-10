@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import { Link } from 'react-router-dom';
 
 
-const Footer = () => {
+const Footer = ({name}) => {
   const [aboutus, setAboutus] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [clientsub, setClientsub] = useState(0);
@@ -44,7 +44,7 @@ const Footer = () => {
   const emailsub = () => {
     setClientsub(prev => prev+1); 
     const randomIndex = Math.floor(Math.random() * 3);
-    setRandomImage(`/random/feedback/${randomIndex}.webp`);
+    setRandomImage(`/ww/random/feedback/${randomIndex}.webp`);
   };
 
   return (
@@ -61,7 +61,7 @@ const Footer = () => {
         <div className={`w-screen ${isMobile ? 'h-[60vh]' : 'h-[70vh]'} flex flex-col py-7 justify-center items-center bg-black relative`}>
           <div className={`circle h-[20vh] w-[20vh] ${isMobile ? 'h-[20vh] w-[20vh] top-0 left-[10vw] rotate-180' : 'h-[40vh] w-[40vh] top-0 left-[20vw] rotate-180'} rounded-full bg-slate-300 absolute`}></div>
           <div className={`circle h-[10vh] w-[10vh] ${isMobile ? 'h-[10vh] w-[10vh] top-[2vh] right-[10vw]' : 'h-[20vh] w-[20vh] top-[2vh] right-[25vw]'} rounded-full bg-slate-300 absolute`}></div>
-          <h1 className={`text-white text-4xl ${isMobile ? 'text-4xl' : 'text-6xl'} mb-5 uppercase text-center`}>Fugin | Wuthering Waves</h1>
+          <h1 className={`text-white text-4xl ${isMobile ? 'text-4xl' : 'text-6xl'} mb-5 uppercase text-center`}>Fugin {name}</h1>
           <div className={`fakefootercont overflow-hidden ${isMobile ? 'h-[25vh] w-[90%]' : 'h-[40vh] w-[40%]'} relative transition-all duration-500`}>
             <div className={`footerscroll duration-500 h-auto ${aboutus ? 'translate-up' : ''}`}>
               <div className={`footercont flex flex-col w-full items-center justify-between ${isMobile ? 'mt-2 h-[25vh] py-2' : 'h-[40vh] py-5'}`}>

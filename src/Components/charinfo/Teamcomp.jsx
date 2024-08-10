@@ -55,9 +55,9 @@ const orderedTeamDescriptions = isMobile
                   : (index === 1 ? 'h-[35vw] bestteam' : '')
               }`}
             >
-              <img src={`/characters/${team[0]}/main.webp`} alt="" className="photo1"/>
-              <img src={`/characters/${name}/main.webp`} alt="" className="photo2 z-10"/>
-              <img src={`/characters/${team[1]}/main.webp`} alt="" className="photo3" />
+              <img src={`/ww/characters/${team[0]}/main.webp`} alt="" className="photo1"/>
+              <img src={`/ww/characters/${name}/main.webp`} alt="" className="photo2 z-10"/>
+              <img src={`/ww/characters/${team[1]}/main.webp`} alt="" className="photo3" />
             </div>
             <div
               className={`data h-auto overflow-hidden bg-white flex flex-col justify-center items-center ${

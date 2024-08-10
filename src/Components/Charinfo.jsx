@@ -9,7 +9,7 @@ import Resonance from './charinfo/Resonance';
 import Weapon from './charinfo/Weapon';
 import Skills from './charinfo/Skills';
 import Echos from './charinfo/Echos';
-import Sidebar from './charinfo/sidebar'; 
+import Sidebar from './charinfo/sidebar';    
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -115,11 +115,11 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata}) => {
         <>
             <div className={`flex h-screen w-screen relative ${isMobile ? '' : ''}`} id='up'>
                 <img src={character.rarity === 4 || character.name === 'rover' || character.name === 'rover (havoc)'
-                    ? `/characters/${param}/top.webp`
-                    : `/characters/${param}/full.webp`
+                    ? `/ww/characters/${param}/top.webp`
+                    : `/ww/characters/${param}/full.webp`
                 } alt="" className={`${character.rarity === 4 || character.name === 'rover' || character.name === 'rover (havoc)' ? isMobile ? 'h-[70vh] top-[10vh]' : 'h-[110vh] right-[10vw]' : isMobile ? 'w-screen h-[80vh]' : 'h-[100vh]  w-[64%]'} object-cover absolute right-0 top-0 bottom-0 -z-10 mainphoto`} />
                 <div className='slace -z-20'></div>
-                <img src={`/elements/${character.element}.webp`} alt="" className='elemsym h-[60vh] aspect-square absolute left-[12vw] top-[20vh] z-10' />
+                <img src={`/ww/elements/${character.element}.webp`} alt="" className='elemsym h-[60vh] aspect-square absolute left-[12vw] top-[20vh] z-10' />
                 <div className="mainintro absolute top-[20vh] w-[35vw] h-auto left-[10vw] leading-tight ">
                     <Star num={character.rarity} />
                     <h2 className="name tracking-tighter" style={{
@@ -132,12 +132,12 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata}) => {
             </div>
 
             <div className="charintro w-screen h-[100vh] bg-zinc-950 flex flex-col px-8 pt-12 items-center absolute z-20 overflow-hidden" id='overview'>
-                <img src={`/region/${character.region}.webp`} alt="" className={`absolute h-[40vh] -z-20 left-[15vw] ${isMobile ? 'bottom-0 w-full' : ''}`} />
-                <img src={`/characters/${param}/top.webp`} alt="" className={`object-cover chartop z-10 absolute left-4 ${isMobile ? 'h-[55vh]' : 'h-[85vh] '}`} />
+                <img src={`/ww/region/${character.region}.webp`} alt="" className={`absolute h-[40vh] -z-20 left-[15vw] ${isMobile ? 'bottom-0 w-full' : ''}`} />
+                <img src={`/ww/characters/${param}/top.webp`} alt="" className={`object-cover chartop z-10 absolute left-4 ${isMobile ? 'h-[55vh]' : 'h-[85vh] '}`} />
                 <div className="bgrect absolute h-[100vh] w-[12vw] bg-zinc-800 top-0 left-[6vw] -z-10"></div>
                 <h1 className='title'>Overview</h1>
                 <div className={`overbox  w-[59vw]  rounded-xl relative flex gap-[1vw] ${isMobile ? 'h-[45vh] w-[95vw] flex-col' : 'h-[23vw] ml-[25vw]'}`}>
-                    <div className={`hbdface absolute rotate-180 bottom-2 right-2 -z-10   overflow-hidden ${isMobile ? ' right-[0vw] bottom-[0vh] h-[28vw] w-[43vw]' : ' h-[10vw] w-auto '}`}><img src={`/characters/${param}/main.webp`} alt="" className='h-[220%] object-cover ' /></div>
+                    <div className={`hbdface absolute rotate-180 bottom-2 right-2 -z-10   overflow-hidden ${isMobile ? ' right-[0vw] bottom-[0vh] h-[28vw] w-[43vw]' : ' h-[10vw] w-auto '}`}><img src={`/ww/characters/${param}/main.webp`} alt="" className='h-[220%] object-cover ' /></div>
                     <div className={`flex  gap-[1vw]  h-full flex-col ${isMobile ? 'w-screen' : 'w-[61.01%]'}`}>
                         <div className={`flex gap-[1vw]  w-full ${isMobile ? 'h-[8vh]' : 'h-[8vw]'}`}>
                             <div className={`oglass  flex flex-col gap-3 items-center ${isMobile ? 'h-[8vh] w-[50vw]' : 'h-full w-[15vw]'}`}>
@@ -148,10 +148,10 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata}) => {
                                 <div className={`absolute bg-neutral-950 rotate-[30deg] z-10 border-r-2 border-white ${isMobile ? ' h-[25vh] w-[32vw]  left-[-7vh] top-[-8vh]' : ' h-[14vw] w-[12vw]  left-[-2vw] top-[-4vw]'}`}></div>
                                 <div className="elem flex-col flex items-center z-20 h-full w-[40%]">
                                     <h2 className={` uppercase text-white ${isMobile ? 'text-[10px]' : 'text-xl'}`}>{character.element}</h2>
-                                    <img src={`/elements/${character.element}.webp`} alt="" className={`${isMobile ? 'h-[65%]' : 'h-[60%]'}`} />
+                                    <img src={`/ww/elements/${character.element}.webp`} alt="" className={`${isMobile ? 'h-[65%]' : 'h-[60%]'}`} />
                                 </div>
                                 <div className={`oweapon flex-col items-center justify-end flex h-full ${isMobile ? 'w-[40vw]' : ' w-[40%]'}`}>
-                                    <img src={`/symbols/${character.weapon}.webp`} alt="" className={`${isMobile ? 'h-[65%]' : 'h-[60%]'}`} />
+                                    <img src={`/ww/symbols/${character.weapon}.webp`} alt="" className={`${isMobile ? 'h-[65%]' : 'h-[60%]'}`} />
                                     <h2 className={` uppercase text-white ${isMobile ? 'text-[10px]' : 'text-xl'}`}>{character.weapon}</h2>
                                 </div>
                             </div>
@@ -167,7 +167,7 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata}) => {
                                 ))}
                             </div>
                             <div className={`oglass relative  hbd ${isMobile ? 'w-[24vw] h-[16vh]' : 'w-[13vw] h-full'}`} onClick={hbdClick}>
-                                <img src="/background/hbd.webp" alt="" className='object-cover h-full rounded-lg' />
+                                <img src="/ww/background/hbd.webp" alt="" className='object-cover h-full rounded-lg' />
                                 <h2 className={` absolute text-center ${isMobile ? 'bottom-14 text-[13px] left-[50%] -translate-x-1/2 w-[90%]' : 'text-2xl'}`}>{character.hbd}</h2>
                             </div>
                         </div>
@@ -176,15 +176,15 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata}) => {
                         <h1 className={` text-white  grid place-content-center ${isMobile ?'top-1 text-center text-sm left-[50%] w-[80%] ' : ' absolute text-xl top-[-2vw] w-[22vw]'}`}>Ascension Material</h1>
                         <div className={`flex  items-center ${isMobile?'gap-6':'flex-col'}`}>
                         <div className="coin ascenbox h-[7vw] w-[7vw] flex flex-col items-center">
-                            <img src="/items/coin.webp" alt="" className='h-[80%]' />
+                            <img src="/ww/items/coin.webp" alt="" className='h-[80%]' />
                             <h2>Credit Shell</h2>
                             <h3>170,000</h3>
                         </div>
                         <div className={`flower flex justify-center ${isMobile ? 'gap-6' : ' gap-10'}`}>
-                            <div className="ascenbox"><img src={`/items/${character.ascension[0]}.webp`} alt="" />
+                            <div className="ascenbox"><img src={`/ww/items/${character.ascension[0]}.webp`} alt="" />
                                 <h2>{character.ascension[0]}</h2>
                                 <h3>46</h3></div>
-                            <div className="ascenbox"><img src={`/items/${character.ascension[1]}.webp`} alt="" />
+                            <div className="ascenbox"><img src={`/ww/items/${character.ascension[1]}.webp`} alt="" />
                                 <h2>{character.ascension[1]}</h2>
                                 <h3>60</h3></div>
                                 </div>
@@ -192,7 +192,7 @@ const Charinfo = ({ charData, weapons, allEchoes, allSonata}) => {
                         <div className={`flex ${isMobile ? 'gap-6' : ''}`}>
                             {[...Array(4)].map((_, i) => (
                                 <div className="ascenbox h-[7vw] flex flex-col items-center">
-                                    <img src={`/items/${character.ascension[i + 2]}.webp`} alt="" className='h-[80%]' />
+                                    <img src={`/ww/items/${character.ascension[i + 2]}.webp`} alt="" className='h-[80%]' />
                                     <h2 className='text-sm'>{character.ascension[i + 2]}</h2>
                                     <h3 className=''>{ascenval[i]}</h3>
                                 </div>

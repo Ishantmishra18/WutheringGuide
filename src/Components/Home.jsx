@@ -46,7 +46,8 @@ const Home = ({latestChar, allWeapon , allEchoes}) => {
     <>
       <div className="homepage h-screen w-screen flex items-center relative overflow-hidden px-8 gap-3">
         <div className="hwholecont pl-2 flex flex-col ">
-          <img className='h-[10vw] w-[10vw] homelogo' src={logo} alt="" />
+          <Link to='/'>
+          <img className='h-[10vw] w-[10vw] homelogo' src={logo} alt="" /></Link>
           <div className="stripe h-[40vh] w-[120vw] absolute top-[40vh] left-[-30vw] -z-10 rotate-45"></div>
           <div className="hcont text-white mt-3 w-[50vw] h-[full] leading-tight tracking-tighter">
             <h2 className='realtext text-center'>Master the Game with Style</h2>
@@ -55,8 +56,8 @@ const Home = ({latestChar, allWeapon , allEchoes}) => {
               Elevate your gameplay with our beautifully crafted guides. Discover expert strategies and tips, all presented with elegance and style. Master every challenge with ease and sophistication.
             </h4>
           </div>
-          <div className="hbtn flex justify-start gap-3">
-            <Link to={`/Guide`} className='btn'>View Guide</Link>
+          <div className="hbtn flex justify-start gap-3 mt-4">
+            <Link to={`/WW/Guide`} className='btn'>View Guide</Link>
             <button className='btn' onClick={()=>viewnew('newchar')}>Check New</button>
           </div>
         </div>
@@ -70,7 +71,7 @@ const Home = ({latestChar, allWeapon , allEchoes}) => {
             return (
               <div key={i} className={`show ${i === 0 ? 'show1' : ''} h-[20vh] w-[20vh] bg-white flex items-center justify-center`}>
                 <img
-                  src={i === 3 ? '/random/centerimg.webp' : `/random/${i+1}/${randomNumber}.${extension}`}
+                  src={i === 3 ? '/ww/random/centerimg.webp' : `/ww/random/${i+1}/${randomNumber}.${extension}`}
                   alt=""
                   className='h-full w-full object-cover rounded-xl'
                 />
@@ -81,14 +82,14 @@ const Home = ({latestChar, allWeapon , allEchoes}) => {
       </div>
       <div className={`h-[100vh] overflow-hidden w-screen relative flex ${isMobile ? 'flex-col justify-start' : 'flex-row'}`} id="newchar">
   <img
-    src={`characters/${latestChar.name}/main.webp`}
+    src={`ww/characters/${latestChar.name}/main.webp`}
     alt=""
     className={`absolute  object-cover z-10 ${isMobile ?' bottom-[-2%] right-0 w-[100vw] h-[80vh]' : 'h-[120vh] right-[20vw] bottom-[-5vw]'}`}
   />
 
   <div className="left h-full w-full md:w-[65%] relative">
     <img
-      src={`characters/${latestChar.name}/full.webp`}
+      src={`ww/characters/${latestChar.name}/full.webp`}
       alt=""
       className={`opacity-30 object-cover ${isMobile ? 'w-[150vh] absolute h-[100vh]' : 'w-full h-full'}`}
     />
@@ -99,19 +100,19 @@ const Home = ({latestChar, allWeapon , allEchoes}) => {
       </div>
       <Link
         className={`latestbtn bg-white relative text-xl md:text-2xl hover:translate-y-3 duration-200 z-30 rounded-2xl text-center grid place-content-center ${isMobile ? 'h-[8vh] w-[60vw]' : 'h-[6vw] w-[18vw]'}`}
-        to={`Guide/${latestChar.name}`}
+        to={`/WW/Guide/${latestChar.name}`}
       >
         View Now
         {charitmes.map((val, key) => (
-          <img src={`items/${latestChar.ascension[val]}.webp`} alt="" className={`absolute btnitem${key + 1} duration-300 opacity-0 btnitem`} />
+          <img src={`/ww/items/${latestChar.ascension[val]}.webp`} alt="" className={`absolute btnitem${key + 1} duration-300 opacity-0 btnitem`} />
         ))}
       </Link>
     </div>
   </div>
 
   <div className={`latestright w-[40vw] md:w-[35%] h-full flex gap-10 z-20 ${isMobile ? 'justify-center items-end py-10 h-[30vh] w-screen' : 'flex-col items-start justify-center px-[7vw]'}`}>
-    <img src={`weapon/${allWeapon[latestChar.weapons[0]].name}.webp`} alt="" className='h-[16vh] w-[16vh] md:h-[21vh] md:w-[21vh] z-20 object-contain aspect-square bg-neutral-900 duration-200 rounded-[25px] hover:-rotate-12 hover:scale-110' />
-    <img src={`echoes/${allEchoes[latestChar.echobest[0]].name}.webp`} alt="" className='h-[12vh] w-[12vh] md:h-[21vh] md:w-[21vh] z-20 object-contain aspect-square bg-neutral-900 duration-200 rounded-[25px] hover:rotate-12 hover:scale-110' />
+    <img src={`ww/weapon/${allWeapon[latestChar.weapons[0]].name}.webp`} alt="" className='h-[16vh] w-[16vh] md:h-[21vh] md:w-[21vh] z-20 object-contain aspect-square bg-neutral-900 duration-200 rounded-[25px] hover:-rotate-12 hover:scale-110' />
+    <img src={`ww/echoes/${allEchoes[latestChar.echobest[0]].name}.webp`} alt="" className='h-[12vh] w-[12vh] md:h-[21vh] md:w-[21vh] z-20 object-contain aspect-square bg-neutral-900 duration-200 rounded-[25px] hover:rotate-12 hover:scale-110' />
   </div>
 </div>
 

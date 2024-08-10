@@ -78,12 +78,12 @@ const Resonance = ({ character, name }) => {
     <>
       <div className="page w-screen h-screen overflow-hidden relative flex flex-col items-center pt-12" id='resonance'>
         <h1 className="title">Resonance</h1>
-        <img src={`/characters/${name}/main.webp`} alt={`${name} main`} className={`charimg absolute ${isMobile ? 'bottom-[20vh] left-[20vw] w-[60vw]' : '-bottom-[10vw] left-0 w-[40vw]'}`} />
+        <img src={`/ww/characters/${name}/main.webp`} alt={`${name} main`} className={`charimg absolute ${isMobile ? 'bottom-[20vh] left-[20vw] w-[60vw]' : '-bottom-[10vw] left-0 w-[40vw]'}`} />
 
         {[...Array(6)].map((_, i) => (
           <img
             key={i}
-            src={`/characters/${name}/resonance/${i + 1}.webp`}
+            src={`/ww/characters/${name}/resonance/${i + 1}.webp`}
             alt={`${name} resonance ${i}`}
             className={`aspect-square absolute resocont transition-transform duration-500 ${getPositionClass(i)} ${i === hoveredIndex ? 'scale-130' : ''} ${isMobile?'bg-neutral-900 rounded-full':''}`}
             style={{top:isMobile ?'':`${(i * 15)+8}vh`, height: isMobile ? '40px' : '80px' }}
@@ -104,7 +104,7 @@ const Resonance = ({ character, name }) => {
             <>
               <div className={`resopriorcont flex flex-col items-center h-full`}>
                 <img
-                  src={`/characters/${name}/resonance/${index}.webp`}
+                  src={`/ww/characters/${name}/resonance/${index}.webp`}
                   alt={`${name} resonance ${index}`}
                   className={`aspect-square ${isMobile ? 'h-[40px]' : 'h-[90%]'}`}
                 />

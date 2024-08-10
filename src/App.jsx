@@ -8,6 +8,7 @@ import ScrollToTop from './Components/ScrollToTop';
 import Home from './Components/Home.jsx';
 import {allWeapon } from './data.js';
 import Privacypol from './privacypol.jsx';
+import Fuginhome from './fuginhome.jsx';
 
 
 
@@ -1982,30 +1983,30 @@ const App = () => {
 
   const router = createBrowserRouter([
     {
-      path:"/Guide/:param",
+      path:"/WW/Guide/:param",
       element:<>
       <ScrollToTop />
       <Navbar buttonNames={buttonNames} onButtonClick={handleButtonClick} resetCard={resetCard} />
       <Charinfo charData={charData} weapons={allWeapon} allEchoes={allEchoes} allSonata={allSonata}/>
-      <Footer />
+      <Footer name={'Wuthering Waves'}/>
       </>
     },
     {
-      path:"/Guide",
+      path:"/WW/Guide",
       element:
       <>
       <ScrollToTop />
       <Navbar buttonNames={buttonNames} onButtonClick={handleButtonClick} resetCard={resetCard} />
       <Cards charData={charData} selectedCardElement={selectedCardElement} />
-      <Footer />
+      <Footer name={'Wuthering Waves'}/>
       </>
     },
     {
-      path:"/",
+      path:"/WW",
       element:<>
       <ScrollToTop />
       <Home latestChar={charData[0]}  allWeapon={allWeapon} allEchoes={allEchoes} />
-      <Footer/>
+      <Footer name={'| Wuthering Waves'}/>
       </>,
       errorElement:<h1 className="text-gray-200">ERROR:???</h1>
     },
@@ -2015,6 +2016,13 @@ const App = () => {
       <ScrollToTop />
      <Privacypol />
       </>,
+    },
+    {
+      path:'/',
+      element:<>
+      <Fuginhome />
+      <Footer />
+</>
     }
   ])
 

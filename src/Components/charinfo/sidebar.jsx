@@ -31,7 +31,7 @@ const Sidebar = () => {
                 {sideBtnNames.map((name, index) => (
                     <div key={index} onClick={() => scrollToSection(name)} className="sidebarbtn flex justify-center md:h-[7vh] h-full gap-0 items-center md:w-[7vh] w-full relative">
                         <div className="sidebarname top-[0px] text-gray-100 md:opacity-0 capitalize md:text-xl text-[10px] absolute md:right-[8vh] opacity-100 md:translate-x-0 pointer-events-none rounded-full bg-neutral-800 py-2 px-4">{name}</div>
-                        <img src={`/symbols/${name}.svg`} alt="" className='md:h-[4vh] h-[2vh]' />
+                        <img src={`/ww/symbols/${name}.svg`} alt="" className='md:h-[4vh] h-[2vh]' />
                     </div>
                 ))}
             </div>

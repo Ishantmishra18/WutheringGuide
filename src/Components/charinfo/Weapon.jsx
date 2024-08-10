@@ -54,7 +54,7 @@ const Weapon = ({character , name , weapons}) => {
             <div  className={`${key === 0 ? 'h-[60%] aspect-square weaponbox' : 'h-[35%] aspect-square weaponbox'} ${index === hoveredIndex ? 'hoveredweaponbox' : ''} ${weapons[index].rarity===5?'wgold': weapons[index].rarity===4?'wpurple':'wblue'}`}  onMouseEnter={() => {setHoveredIndex(index);setHoveredcharIndex(key)}}>
             <div className={`rank absolute left-2 z-30  text-white ${isMobile?'text-sm bottom-0 left-0':' bottom-4 text-2xl'}`}>{rank[key]}</div>
             <Star num={weapons[index].rarity} size='small'/>
-            <img src={`/weapon/${weapons[index].name}.webp`} alt={weapons[index].name} className={`-rotate-45 h-full w-full top-0 absolute -z-10 ${index === hoveredIndex ? 'hoveredweapon' : ''}`}
+            <img src={`/ww/weapon/${weapons[index].name}.webp`} alt={weapons[index].name} className={`-rotate-45 h-full w-full top-0 absolute -z-10 ${index === hoveredIndex ? 'hoveredweapon' : ''}`}
            
              /></div>
             </>
@@ -63,7 +63,7 @@ const Weapon = ({character , name , weapons}) => {
 
         <div className={`wdata p-[10px] rounded-lg ${isMobile ? 'w-[80vw] gap-3' : 'w-[40vw] mb-24'} h-auto backdrop-blur-3xl z-10 flex flex-col justify-start items-center bradius`}>
           <div className={`flex w-auto items-center ${isMobile ? 'mb-2' : 'mb-10'}`}>
-            <img src={`/symbols/${character.weapon}.webp`} alt="" className={`aspect-square wgsap ${isMobile ? 'h-[4vh]' : 'h-[10vh]'}`} />
+            <img src={`/ww/symbols/${character.weapon}.webp`} alt="" className={`aspect-square wgsap ${isMobile ? 'h-[4vh]' : 'h-[10vh]'}`} />
             <h1 className={`font-bold text-white text-center wgsap ${isMobile ? 'text-3xl' : 'text-6xl m-2'}`}>
               {hoveredIndex !== null ? weapons[hoveredIndex].name : ''}
             </h1>

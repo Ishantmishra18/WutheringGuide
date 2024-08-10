@@ -31,7 +31,7 @@ const Echos = ({ character, allEchoes, allSonata }) => {
 
     return (
       <div className={`ecircle aspect-square rounded-full bg-neutral-950 grid place-content-center ${isMobile ? 'h-[70vw] relative -right-[20vw] top-10' : 'h-[24vw] relative'}`}>
-        <img src={`/echoes/${allEchoes[matchingElement].name}.webp`} alt={allEchoes[matchingElement].name} className={`rounded-full aspect-square ${isMobile ? 'h-[68vw]' : 'h-[22.5vw]'}`} />
+        <img src={`/ww/echoes/${allEchoes[matchingElement].name}.webp`} alt={allEchoes[matchingElement].name} className={`rounded-full aspect-square ${isMobile ? 'h-[68vw]' : 'h-[22.5vw]'}`} />
         <div className="esubcircle sub1">
           <h1 className='text-2xl'>Main Stat</h1>
           {character.echosub.main[echoIndex].map((data, idx) => (
@@ -61,7 +61,7 @@ const Echos = ({ character, allEchoes, allSonata }) => {
           }}
         >
           <div className={`${key === 0 ? '' : 'hidden'} ${isMobile ? '-left-3  -top-6' : 'left-[-20%]  top-[-10%]'} absolute py-1 px-3 rounded-full  text-white bg-black`}>Best</div>
-          <img src={`/echoes/sonata/${allSonata.name[index]}.webp`} alt="" className="h-[95%] object-cover" />
+          <img src={`/ww/echoes/sonata/${allSonata.name[index]}.webp`} alt="" className="h-[95%] object-cover" />
           <h4 className="py-7">{allSonata.name[index]}</h4>
           <div
             className={`esonades absolute h-auto p-4 z-20 bg-black top-[6vh] rounded-lg text-white opacity-0 pointer-events-none px-3 flex flex-col items-center gap-4 ${isMobile ? ' w-[100%] left-0' : 'w-[140%] -left-[20%]'}`}>
@@ -83,8 +83,8 @@ const Echos = ({ character, allEchoes, allSonata }) => {
           }}
         >
           <div className="sonimgcont h-[95%] aspect-square relative">
-            <img src={`/echoes/sonata/${allSonata.name[index1]}.webp`} alt="" className="h-full w-full object-cover absolute bottom-2 left-1" />
-            <img src={`/echoes/sonata/${allSonata.name[index2]}.webp`} alt="" className="h-full w-full object-cover absolute top-2 right-4" />
+            <img src={`/ww/echoes/sonata/${allSonata.name[index1]}.webp`} alt="" className="h-full w-full object-cover absolute bottom-2 left-1" />
+            <img src={`/ww/echoes/sonata/${allSonata.name[index2]}.webp`} alt="" className="h-full w-full object-cover absolute top-2 right-4" />
           </div>
           <h4 className="py-7">{allSonata.name[index1]} / {allSonata.name[index2]}</h4>
           <div
@@ -186,12 +186,12 @@ const Echos = ({ character, allEchoes, allSonata }) => {
                   key={index}
                   className={`showecho bg-neutral-950 rounded-lg flex flex-col items-center justify-start ${isMobile ? 'h-[14vh] w-[20vw]' : 'h-[26vh] w-[8vw]'}`}
                 >
-                  <img src={`/echoes/${val.name}.webp`} alt={val.name} className={`object-contain ${isMobile ? 'h-[70%]' : 'h-[75%]'}`} />
+                  <img src={`/ww/echoes/${val.name}.webp`} alt={val.name} className={`object-contain ${isMobile ? 'h-[70%]' : 'h-[75%]'}`} />
                   <h2 className={`text-white h-[15%] grid place-content-center text-center bg-neutral-950 py-4 rounded-full ${isMobile ? 'text-[8px]' : 'text-sm'}`}>{val.name}</h2>
                   <div className="flex h-[20%] pt-1 w-full justify-start gap-2 items-start px-2">
                     {val.sonata.map((sonInd) => (
                       <div key={sonInd} className="h-full">
-                        <img src={`/echoes/sonata/${allSonata.name[sonInd]}.webp`} alt={allSonata.name[sonInd]} className={`h-[70%] aspect-square rounded-full bg-slate-400 ${val.cost === 1 ? 'hidden' : ''}`} />
+                        <img src={`/ww/echoes/sonata/${allSonata.name[sonInd]}.webp`} alt={allSonata.name[sonInd]} className={`h-[70%] aspect-square rounded-full bg-slate-400 ${val.cost === 1 ? 'hidden' : ''}`} />
                       </div>
                     ))}
                   </div>

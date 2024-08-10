@@ -78,7 +78,7 @@ const Skills = ({ character, name }) => {
         <>
         <div className={`stitle flex items-center justify-between w-full ${isMobile?'h-[6vh] px-2':'px-12 h-[15%]'}`}>
           <div className="left flex items-center h-full">
-            <img src={`${hoveredIndex===0?`/symbols/${character.weapon}.webp`:`/characters/${name}/skills/${hoveredIndex}.webp`}`} alt="" className="h-[110%] aspect-square object-cover" />
+            <img src={`${hoveredIndex===0?`/ww/symbols/${character.weapon}.webp`:`/ww/characters/${name}/skills/${hoveredIndex}.webp`}`} alt="" className="h-[110%] aspect-square object-cover" />
             <h2 className={` text-black  bradius bg-white font-bold ${isMobile?'text-[12px] px-3 py-1':'text-4xl py-3 px-4'}`}>{skills[hoveredIndex]}</h2>
           </div>
           <h2 className={`text-white text-center ${isMobile?'text-[12px]':'text-2xl'}`}>{character.skilldes[hoveredIndex].name} </h2>
@@ -98,7 +98,7 @@ const Skills = ({ character, name }) => {
           {character.skilldes[hoveredIndex].map((i ,key) => (
             <div className={`flex flex-col items-center  ${isMobile?'w-[90%] gap-2':'h-full w-[44%]'}`}>
               <div className={`flex  items-center ${isMobile?'h-[2vh]':'h-[20vh]'}`}>
-                <img src={`/characters/${name}/skills/${7-key}.webp`} alt="" className={` object-cover ${isMobile?'h-[100%]':'h-[30%]'} ${hoveredIndex===7?'hidden':''}`}/>
+                <img src={`/ww/characters/${name}/skills/${7-key}.webp`} alt="" className={` object-cover ${isMobile?'h-[100%]':'h-[30%]'} ${hoveredIndex===7?'hidden':''}`}/>
                 <div className={`passtitle text-center text-white capitalize ${isMobile?'text-[12px]':'text-3xl'}`}>{i.name}</div>
                 </div>
                 <p className={`text-neutral-400 ${isMobile?'text-[10px]':''}`}>{i.des}</p>
@@ -130,14 +130,14 @@ const Skills = ({ character, name }) => {
         </div>
         <div className={`flex flex-wrap  h-[18vh]  bg-slate-70 justify-center ${isMobile?'gap-8 w-[96vw]':'gap-2 w-[60vw]'}`}>
         <div className={`flex flex-col items-center justify-start   ${isMobile?'h-[10vh] w-[15vw]':'h-[20vh] w-[18vh]'}`}>
-            <img src={`/items/coin.webp`} alt="" className='h-[65%]' />     
+            <img src={`/ww/items/coin.webp`} alt="" className='h-[65%]' />     
             <h2 className={`text-white text-[10px] text-center ${isMobile?'text-[8px]':''}`}>Credit Shell</h2> 
             <h1 className={`text-neutral-300 font-bold  ${isMobile?'text-[10px]':'text-sm'}`}>{skillcoincurrent[costIndex][sliderValue-1]}</h1>
             <h1 className={`text-neutral-300 font-bold ${isMobile?'text-[10px]':'text-sm'}`}>[{sumCost(costIndex,sliderValue)}]</h1>
           </div>
           {skillcostIndex[costIndex].map((val)=>(
           <div className={`flex flex-col items-center justify-start   ${isMobile?'h-[10vh] w-[15vw]':'h-[20vh] w-[18vh]'}`}>
-            <img src={`/items/${character.skillcost[val]}.webp`} alt="" className='h-[65%]' />     
+            <img src={`/ww/items/${character.skillcost[val]}.webp`} alt="" className='h-[65%]' />     
             <h2 className={`text-white text-[10px] text-center w-[75px] ${isMobile?'text-[8px]':''}`}>{character.skillcost[val]}</h2> 
             <h1 className={`text-neutral-300  font-bold ${isMobile?'text-[10px]':'text-sm'}`}>{skillcostcurrent[costIndex][val][sliderValue-1]}</h1>
             <h1 className={`text-neutral-300  font-bold ${isMobile?'text-[10px]':'text-sm'}`}>[{sumCostmat(costIndex,val,sliderValue)}]</h1>
@@ -183,16 +183,16 @@ const Skills = ({ character, name }) => {
       <div className="title">Skills</div>
       <div className={`absolute passivebar  flex  items-center justify-evenly duration-500 ${costToggle?'-translate-x-60 -rotate-45 opacity-0':''} ${isMobile?'h-auto w-[90vw] top-[84vh]':' left-8 flex-col  h-[90vh] w-[10vw]'}`}>
       <div className="">
-          <img src={`/symbols/passive.webp`} alt="" className={`h-[60%] imgskill object-cover ${6 === hoveredIndex ? 'scale-130' : ''}`} onMouseEnter={() => setHoveredIndex(6)} />
+          <img src={`/ww/symbols/passive.webp`} alt="" className={`h-[60%] imgskill object-cover ${6 === hoveredIndex ? 'scale-130' : ''}`} onMouseEnter={() => setHoveredIndex(6)} />
           <h2>Inherent Skills</h2>
         </div>
         <div className="">
-          <img src={`/characters/${name}/skills/5.webp`} alt="" className={`h-[60%] imgskill object-cover ${5 === hoveredIndex ? 'scale-130' : ''}`}
+          <img src={`/ww/characters/${name}/skills/5.webp`} alt="" className={`h-[60%] imgskill object-cover ${5 === hoveredIndex ? 'scale-130' : ''}`}
           onMouseEnter={() => setHoveredIndex(5)}/>
           <h2 className='text-white'>Outro Skills</h2>
         </div>
         <div className="">
-          <img src={`/symbols/statbonus.webp`} alt="" className={`h-[60%] imgskill object-cover ${7 === hoveredIndex ? 'scale-130' : ''}`}
+          <img src={`/ww/symbols/statbonus.webp`} alt="" className={`h-[60%] imgskill object-cover ${7 === hoveredIndex ? 'scale-130' : ''}`}
           onMouseEnter={() => setHoveredIndex(7)}/>
           <h2 className='text-white'>Stat Bonus</h2>
         </div>
@@ -218,7 +218,7 @@ const Skills = ({ character, name }) => {
           >
             <h2 className="text-white srank">{rank[index]}</h2>
             <img
-              src={`${i===0?`/symbols/${character.weapon}.webp`:`/characters/${name}/skills/${i}.webp`}`}
+              src={`${i===0?`/ww/symbols/${character.weapon}.webp`:`/ww/characters/${name}/skills/${i}.webp`}`}
               alt={`${i + 1}`}
               className={`h-[80%] imgskill ${i === hoveredIndex ? 'scale-130' : ''}`}
               onMouseEnter={() => setHoveredIndex(i)}
@@ -230,15 +230,15 @@ const Skills = ({ character, name }) => {
         <div className={`absolute text-white uppercase bg-black rounded-full ${isMobile?'right-[42vw] top-[23vh] p-2 px-4 text-[12px]':'right-[18vw] rounded-bl-sm top-[15vh] p-4 '}`}>Least</div>
         <div className={`absolute text-white uppercase bg-black rounded-full ${isMobile?'left-[42vw] top-[23vh] p-2 px-4 text-[12px]':'left-[18vw] rounded-br-sm top-[15vh]  p-4'}`}>Most</div>
         <div className={`toggleskill  ${isMobile?'left-[50vw] bottom-[7vh]':'left-[30vw] bottom-[14vh]'}`}>
-          <img src={`/symbols/passive.webp`} alt="" className={`h-[80%] imgskill ${0 === costIndex? 'scale-130' : ''}`} onMouseEnter={() => handleCost(0)} />
+          <img src={`/ww/symbols/passive.webp`} alt="" className={`h-[80%] imgskill ${0 === costIndex? 'scale-130' : ''}`} onMouseEnter={() => handleCost(0)} />
           <h2>Inherent Skills</h2>
         </div>
         <div className={`toggleskill ${isMobile?'left-[84.5vw] bottom-[2vh]':'left-[54.5vw] bottom-[0vh]'}`}>
-          <img src={`/symbols/forteall.webp`} alt="" className={`h-[80%] imgskill ${1 === costIndex ? 'scale-130' : ''}`} onMouseEnter={() => handleCost(1)} />
+          <img src={`/ww/symbols/forteall.webp`} alt="" className={`h-[80%] imgskill ${1 === costIndex ? 'scale-130' : ''}`} onMouseEnter={() => handleCost(1)} />
           <h2>Forte Skills</h2>
         </div>
         <div className={`toggleskill ${isMobile?'left-[119vw] bottom-[7vh]':'left-[79vw] bottom-[14vh]'}`}>
-          <img src={`/symbols/statbonus.webp`} alt="" className={`h-[80%] imgskill ${2 === costIndex ? 'scale-130' : ''}`} onMouseEnter={() => handleCost(2)} />
+          <img src={`/ww/symbols/statbonus.webp`} alt="" className={`h-[80%] imgskill ${2 === costIndex ? 'scale-130' : ''}`} onMouseEnter={() => handleCost(2)} />
           <h2>Stat Bonuses</h2>
         </div>
         

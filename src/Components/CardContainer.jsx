@@ -54,12 +54,12 @@ const CardContainer = ({ charData, selectedCardElement }) => {
               selectedCardElement === 'null') && (
               <Link
                 key={index}
-                to={`/Guide/${item.name}`}
+                to={`/WW/Guide/${item.name}`}
                 className="h-[360px] w-[220px] relative overflow-hidden fakecard bradius"
               >
                 <div className="h-[83.5%] w-full bg-slate-500 mr-[12px] cards bottom-1 absolute bradius">
                   <img
-                    src={`/symbols/${item.weapon}.webp`}
+                    src={`/ww/symbols/${item.weapon}.webp`}
                     alt=""
                     className="absolute z-20 top-[0px] -skew-x-12 h-[16%] bg-neutral-900 weaponcard object-contain p-2 rounded-md"
                   />
@@ -67,14 +67,14 @@ const CardContainer = ({ charData, selectedCardElement }) => {
                 <img
                   src={
                     item.rarity === 5
-                      ? `/characters/${item.name}/background.jpeg`
-                      : `/background/cards.jpg`
+                      ? `/ww/characters/${item.name}/background.jpeg`
+                      : `/ww/background/cards.jpg`
                   }
                   alt=""
                   className="h-[81%] w-[96%] cardcon bradius object-cover z-10"
                 />
                 <img
-                  src={`/characters/${item.name}/main.webp`}
+                  src={`/ww/characters/${item.name}/main.webp`}
                   alt=""
                   className="h-[82%] w-[96%] photo bradius z-20"
                 />
