@@ -20,7 +20,7 @@ const Navbar = ({ buttonNames, onButtonClick }) => {
       <div className='h-full w-[84.5%] flex items-center justify-around z-50 z elemcont rounded-l-full rounded-r-2xl'>
         {buttonNames.map((name, index) => (
           <Link key={index} onClick={() => onButtonClick(name)} className="element h-[80%] aspect-square duration-300 p-[6px]" to={`/WW/Guide`}>
-            <img src={`/ww/elements/${name}.webp`} alt={name} className="h-full w-full" />
+            <img src={`/ww/elements/${name}.webp`} alt={name} className="h-full w-full object-contain" />
             <div className="elemname top-[0px] text-gray-100 opacity-0 capitalize pointer-events-none">{name}</div>
           </Link>
         ))}
