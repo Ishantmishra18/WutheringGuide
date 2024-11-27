@@ -82,6 +82,7 @@ const Footer = ({name}) => {
             </div>
           </div>
           <Link to='/privacypolicy' className={`text-white mt-10 ${isMobile?'text-sm':'text-xl'}`}>© 2024 FuginGuides. All rights reserved.</Link>
+          <a href="/ads.txt" className="text-white" target="_blank" rel="noopener noreferrer">@adsense</a>
         </div>
       </footer>
     </>
